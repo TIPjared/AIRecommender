@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-y971ehs@7&e8i659o$_wlxx=i#^8=6exo4=*i^cc4-k%u5ez*$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'fallback_dev_secret')
+OPENAI_KEY = os.getenv('OPENAI_KEY')
+MONGO_URI = os.getenv('MONGO_URI')
 
 # Application definition
 
