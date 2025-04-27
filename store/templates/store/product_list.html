@@ -16,7 +16,7 @@
     <h2>All Products</h2>
     <ul>
         {% for product in products %}
-            <li> {{ product.name }} -  ₱{{ product.store }}</li>
+            <li> {{ product.name }} -  ₱{{ product.price }}</li>
         {% endfor %}
     </ul>
     <a href="{% url 'add_product' %}">Add New Product</a>
@@ -24,7 +24,7 @@
     <h2>Recommended Products</h2>
     <ul>
         {% for product in recommendations %}
-            <li>{{ product.name }} - ₱{{ product.price }} </li>
+        <li>{{ product.name }} - ₱{{ product.price }}</li>
         {% endfor %}
     </ul>
 </body>
