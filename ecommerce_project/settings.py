@@ -33,7 +33,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback_dev_secret')
-OPENAI_KEY = os.getenv('OPENAI_KEY')
+GEMINI_KEY = os.getenv('GEMINI_KEY')
 MONGO_URI = os.getenv('MONGO_URI')
 
 # Application definition

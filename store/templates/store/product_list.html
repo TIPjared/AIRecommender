@@ -21,11 +21,11 @@
     </ul>
     <a href="{% url 'add_product' %}">Add New Product</a>
 
-    <h2>Recommended Products</h2>
-    <ul>
-        {% for product in recommendations %}
-        <li>{{ product.name }} - ₱{{ product.price }}</li>
-        {% endfor %}
-    </ul>
+    <h2>Recommended Products (AI-Powered)</h2>
+    <div>
+        <p>{{ recommendation}}</p>
+    </div>
+
+    
 </body>
 </html>
